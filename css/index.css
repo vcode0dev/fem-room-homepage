@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+/*reset styles*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 100%;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*colors*/
+:root {
+  --neutral-50: #fff;
+  --neutral-500: #a0a0a0;
+  --neutral-800: #444444;
+  --neutral-950: #000;
+}
+
+/*typography*/
+.heading-xl {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 2.3125rem;
+  letter-spacing: -1.66667px;
+  color: var(--neutral-950);
+}
+
+.heading-md {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  letter-spacing: 5.83333px;
+  color: var(--neutral-950);
+}
+
+.text-md {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  letter-spacing: -0.333333px;
+  color: var(--neutral-500);
+}
+
+.text-nav {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 0.9375rem;
+  letter-spacing: -0.666667px;
+  color: var(--neutral-950);
+}
+
+@media screen and (min-width: 45rem) {
+  .heading-xl {
+    font-size: 3rem;
+    line-height: 2.75rem;
+    letter-spacing: -2px;
+  }
+
+  .heading-md {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    letter-spacing: 5px;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .text-nav {
+    color: var(--neutral-50);
+  }
+}
+
+/*buttons*/
+.primary-button {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--neutral-950);
+  display: grid;
+  place-items: center;
+}
+
+.secondary-button {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1rem;
+  letter-spacing: 12.5px;
+  color: var(--neutral-950);
+}
+
+.primary-button:hover {
+  background-color: var(--neutral-800);
+}
+
+.secondary-button:hover {
+  color: var(--neutral-500);
+}
+
+@media screen and (min-width: 75rem) {
+  .primary-button {
+    width: 5rem;
+    height: 5rem;
+  }
+} 
