@@ -1,29 +1,40 @@
 # TODO
 
-- Remove the attribute `grid-column` from the `.grid-container` class:
-    
-    Reason: The attribute `grid-column` has no effect on the element `.grid-container` since it is not a grid-item.
-    
-- Remove the fourth `auto` from the attribute `grid-template-colums` of the `div.grid-container`:
+(obs: all changes have to occur inside the media query)
 
-    Reason: Since there are only three grid-items children, the fourth `auto` is not necessary.
-    
-    Code: Maybe it's worth to know that `grid-template-columns: auto auto auto` or `grid-template-columns: repeat(3, auto)` are equivalent.
-        
-- Add the utility class `.container` to the `div.grid-container`:
+- Add margin top to the `div.grid-container`
 
-    Reason: the class `.container` is necessary since without it the `div.grid-container` gets bigger than the sections before it (`nav.nav-bar` and `section.hero-section`) on large viewports, e.g. 1920px;
-    
-- Create and add a class `.text-container` to the second grid-item of the `div.grid-container` and add padding and margin inside to position the text. 
+  Reason: Implementing the design.
 
-    Reason. Just implementing the design.
-    
-    Code: Something like `.text-container { padding: 61px 48px 0px` } should work.
-    
+  Code: `margin-top: 72px`
 
-- Add `margin-top` to the text inside `div.text-container`.
+- Add width min(500px, 100vw) to the images containers.
 
-    Reason. Just implementing the design.
-    
-    Code: something like `.text-container .text-md { margin-top: 15px }` should work.
-   
+  Reason: following the design, on mobile viewport, the images occupy full width. Although the images should not be much larger than 375px not only because they will become to streched and lose quality, but because in the tablet viewport the max-width of the container is 500px (this is why the 500px).
+
+  Code: Since both image container have the class `.grid-item` and they are the only ones to have
+  this class, `grid-item: {width: min(500px, 100vw)}`;
+
+- Add overflow hidden to `div.grid-container`:
+
+  Reason: when you have a element with size 100vw, especially, on Windows browsers, the element becomes larger than the viewport (it's weird, I think it's is a browser bug, but happens). Because of that we have to use overflow hidden to avoid the browser creating an horizontal scrollbar.
+
+  Code: `.grid-container { overflow: hidden }`
+
+- Change the unit used in the `grid-template-columns` from 1fr to 100%;
+
+  Reason: Most of the time 1fr is identical to 100%, but since we are creating a grid-item larger than its parent 1fr will be equal to 100vw not 100%.
+
+  Code: `.grid-container { grid-template-columns: 100% }`
+
+- And add justify-content center to `div.grid-container`
+
+  Reason: Since the images are bigger than its parents, they should be centered.
+
+  Code: `.grid-container { justify-content: center }`
+
+- Ajust the padding in the `div.text-container`
+
+  Reason: The text container has no padding on mobile and tablet viewport
+
+  Code: `.text-container {padding: 0}`
