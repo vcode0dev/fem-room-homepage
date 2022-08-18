@@ -235,6 +235,7 @@ img {
   display:grid;
   grid-template-columns: auto auto auto;
   justify-content: space-evenly;
+  
 
 
 }
@@ -242,3 +243,10 @@ img {
 .text-container { padding: 61px 48px 0px } 
 
 .text-container .text-md { margin-top: 15px }
+
+@media screen and (max-width: 1199px) {
+  .grid-container{
+    grid-template-columns: 1fr;
+    gap: 40px
+  }
+}
