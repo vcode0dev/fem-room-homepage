@@ -149,31 +149,30 @@ img {
 }
 
 .hero-section {
-  position: relative;
-  padding-top: 22.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-section picture {
+  display: grid;
+  height: inherit;
 }
 
 .hero-section .image-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  max-width: 31.25rem;
-  margin-inline: auto;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   height: 22.5rem;
-  background-color: var(--neutral-950);
+  position: relative;
 }
 
 .hero-section .hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-position: center;
+  max-width: 25rem;
+  margin-inline: auto;
+  height: inherit;
   object-fit: cover;
-  opacity: 0.94;
+  object-position: center;
+  filter: brightness(80%);
 }
 
 .hero-section .slider-buttons {
@@ -181,7 +180,7 @@ img {
   align-items: center;
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: max(0px, 50vw - 12.5rem);
   z-index: 1;
 }
 
@@ -200,20 +199,20 @@ img {
 }
 
 @media screen and (min-width: 75rem) {
-  .hero-section {
-    padding-top: 0;
-  }
-
   .hero-section .container {
     display: grid;
-    grid-template-columns: 58.3333% 1fr;
+    grid-template-columns: 58.3333% 41.6667%;
   }
 
   .hero-section .image-container {
-    position: relative;
-    margin: 0;
+    width: 100%;
     max-width: none;
     height: 33.375rem;
+    margin-left: 0;
+  }
+
+  .hero-section .hero-image {
+    max-width: 100%;
   }
 
   .hero-section .slider-buttons {
@@ -224,11 +223,11 @@ img {
     margin-top: 7.5rem;
   }
 
-  .hero-section .text-md{
+  .hero-section .text-md {
     margin-top: 1.125rem;
   }
 
-  .hero-section .secondary-button{
+  .hero-section .secondary-button {
     margin-top: 1.625rem;
   }
 }
