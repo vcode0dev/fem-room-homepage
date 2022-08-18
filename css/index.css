@@ -48,7 +48,7 @@ img {
 
 @media screen and (min-width: 45rem) {
   .container {
-    max-width: 31.25rem;
+    max-width: 25rem;
   }
 }
 
@@ -245,20 +245,24 @@ img {
 .text-container .text-md { margin-top: 15px }
 
 @media screen and (max-width: 1199px) {
-  div.grid-container{
+
+  .our-future-section{
+    overflow: hidden;
+  }
+
+  .grid-container{
     grid-template-columns: 100%;
     gap: 40px;
-    margin-top: 72px;
-    overflow: hidden;
-    justify-content: center;
-
+    margin-top: 72px;    
+    justify-items: center;
   }
+
+  .grid-item{
+    width: min(400px, 100vw);    
+  }
+
+  
   
 }
-@media screen {
-  .grid-item{
-    width: min(500px, 100vw)
-  }
-  
-} 
+
   
