@@ -232,3 +232,11 @@ img {
     margin-top: 1.625rem;
   }
 }
+.grid-container {
+  display:grid;
+  grid-column: 1 / span 2;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+
+
+}
