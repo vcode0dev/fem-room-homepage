@@ -240,13 +240,25 @@ img {
 
 }
 
-.text-container { padding: 61px 48px 0px } 
+.text-container { padding: 0} 
 
 .text-container .text-md { margin-top: 15px }
 
 @media screen and (max-width: 1199px) {
-  .grid-container{
-    grid-template-columns: 1fr;
-    gap: 40px
+  div.grid-container{
+    grid-template-columns: 100%;
+    gap: 40px;
+    margin-top: 72px;
+    overflow: hidden;
+    justify-content: center;
+
   }
+  
 }
+@media screen {
+  .grid-item{
+    width: min(500px, 100vw)
+  }
+  
+} 
+  
