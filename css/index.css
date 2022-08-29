@@ -144,7 +144,7 @@ button {
 }
 
 .secondary-button:hover {
-  color: var(--neutral-500);
+  opacity: 63%;
 }
 
 @media screen and (min-width: 75rem) {
@@ -370,4 +370,11 @@ button {
   .grid-item {
     width: min(400px, 100vw);
   }
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+  color: var(--neutral-500);
 }

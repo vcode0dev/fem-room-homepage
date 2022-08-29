@@ -51,28 +51,40 @@
           <div class="image-container">
             <picture class="picture">
               <source
+                data-ref="sliderDesktopImage"
                 media="(min-width: 75rem)"
                 srcset="/images/desktop-image-hero-1.jpg"
               />
               <img
+                data-ref="sliderMobileImage"
                 class="hero-image"
                 src="/images/mobile-image-hero-1.jpg"
                 alt=""
               />
             </picture>
             <div class="slider-buttons">
-              <button class="primary-button" aria-label="see next slide">
+              <button
+                class="primary-button"
+                aria-label="see previous slide"
+                data-ref="sliderBtnLeft"
+              >
                 <img src="/images/icon-angle-left.svg" alt="" />
               </button>
-              <button class="primary-button" aria-label="see next slide">
+              <button
+                class="primary-button"
+                aria-label="see next slide"
+                data-ref="sliderBtnRight"
+              >
                 <img src="/images/icon-angle-right.svg" alt="" />
               </button>
             </div>
           </div>
 
           <header class="header">
-            <h1 class="heading-xl">Discover innovative ways to decorate</h1>
-            <p class="text-md">
+            <h1 class="heading-xl" data-ref="sliderTitle">
+              Discover innovative ways to decorate
+            </h1>
+            <p class="text-md" data-ref="sliderDescription">
               We provide unmatched quality, comfort, and style for property
               owners across the country. Our experts combine form and function
               in bringing your vision to life. Create a room in your own style
@@ -85,25 +97,6 @@
           </header>
         </div>
       </section>
-      <!--<div>
-    We are available all across the globe
-
-    With stores all over the world, it's easy for you to find furniture for your home or place of business. 
-    Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
-    store locator. Any questions? Don't hesitate to contact us today.
-
-    Shop now
-
-  </div>
-  <div>
-    Manufactured with the best materials
-
-    Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
-    to ensure that every product is made as perfect and as consistent as possible. With three decades of 
-    experience in this industry, we understand what customers want for their home and office.
-
-    Shop now
-  </div>-->
       <section class="our-funiture-section">
         <div class="grid-container container">
           <div class="grid-item">
@@ -131,7 +124,14 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a
+        href="https://github.com/vcode0dev/fem-room-homepage"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @KignaDev and @vanderms</a
+      >.
     </footer>
   </body>
 </html>
